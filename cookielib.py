@@ -9,8 +9,6 @@ cookies = ""
 logger.debug("Opening Cookies")
 with open("cookies.txt", "r") as cookiesFile:
     cookies_contents = cookiesFile.read()
-    #if cookies_contents.endswith("\n"):
-    #    cookies_contents = cookies_contents.split("\n")[0]
     cookies = cookies_contents
     cookiesFile.close()
 logger.info("Cookies loaded")

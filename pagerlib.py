@@ -42,7 +42,6 @@ def download_file_test_url(urls, bookid, output_file):
             logger.debug("Trying " + book_url)
             headers = {'Cookie': cookies}
             workspace = requests.get(book_url, headers=headers).text
-            print(workspace)
             if "NoSuchKey" in workspace:
                 logger.info("Failed to get workspace file from " + book_url)
                 continue

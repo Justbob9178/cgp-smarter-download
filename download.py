@@ -141,7 +141,6 @@ default_links = []
 if ("defaults" in pages):
     logger.debug("Parsing default page attributes")
     page_contents = pages["defaults"]
-    print(page_contents)
     # edit default attributes
     if ("backgroundImageWidth" in page_contents):
         default_background_image_width = page_contents["backgroundImageWidth"]
@@ -334,7 +333,6 @@ for page_name, page_contents in pages.items():
     page_template = page_template.replace("%HOVER_COLOUR%", str(link_hover_colour))
     links_text = ""
     for link in links:
-        print(link)
         lnk_width = link["rect"][0]
         lnk_height = link["rect"][1]
         lnk_x = link["rect"][2]
